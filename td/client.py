@@ -743,7 +743,7 @@ class TDClient():
         
         # Check only if you don't have a date and do have a period.
         elif (not start_date and not end_date and period):
-'''
+"""
             # Attempt to grab the key, if it fails we know there is an error.
             try:
 
@@ -758,7 +758,7 @@ class TDClient():
 
             if frequency_type == 'minute' and frequency not in ['1', '5', '10', '15', '30']:
                 raise ValueError('Invalid Minute Frequency, must be 1,5,10,15,30')
-'''
+"""
         # build the params dictionary
         params = {
             'apikey': self.client_id,
