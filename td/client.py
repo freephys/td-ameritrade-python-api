@@ -736,29 +736,8 @@ class TDClient():
             data, false for regular market hours only.
             Default is true
         """
-'''
-        # Fail early, can't have a period with start and end date specified.
-        if (start_date and end_date and period):
-            raise ValueError('Cannot have Period with start date and end date')
-        
-        # Check only if you don't have a date and do have a period.
-        elif (not start_date and not end_date and period):
 
-            # Attempt to grab the key, if it fails we know there is an error.
-            try:
 
-                # check if the period is valid.
-                plist = VALID_CHART_VALUES[frequency_type][period_type]
-                if int(period) in plist:
-                    True
-                else:
-                    raise IndexError('Invalid Period.')
-            except:
-                raise KeyError('Invalid Frequency Type or Period Type you passed through is not valid')
-
-            if frequency_type == 'minute' and frequency not in ['1', '5', '10', '15', '30']:
-                raise ValueError('Invalid Minute Frequency, must be 1,5,10,15,30')
-'''
         # build the params dictionary
         params = {
             'apikey': self.client_id,
