@@ -748,9 +748,7 @@ class TDClient():
             try:
 
                 # check if the period is valid.
-                print(period_type)
-                print(type(period_type))
-                print(VALID_CHART_VALUES[frequency_type][period_type])
+                print(VALID_CHART_VALUES)
                 if int(period) in VALID_CHART_VALUES[frequency_type][period_type]:
                     True
                 else:
